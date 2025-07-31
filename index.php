@@ -37,7 +37,8 @@
         <li><a href="W02_02_Grade.php">Grade</a></li>
         <li><a href="HW02.php">PHP Calculate Money</a></li>
         <li><a href="W06_01_LoopProduct.php">Show Product (fix data)</a></li>
-        <li><a href="">Connect Database</a></li>
+        <li><a href="W07_01_Connectdd.php">Connect Database</a></li>
+        <li><a href="W07_02_fetchData.php">Fetch Data</a></li>
         <li><a href="">Show Product (From Database)</a></li>
 
 
