@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once '../config.php';
 require_once 'auth_admin.php';
 ?>
@@ -46,21 +45,25 @@ require_once 'auth_admin.php';
 
         .btn-products {
             background-color: #f7c948;
+            /* เหลือง */
             color: #4b3b2f;
         }
 
         .btn-orders {
-            background-color: #ffe08a;
-            color: #4b3b2f;
+            background-color: #f4a261;
+            /* ส้มอ่อน */
+            color: #fff;
         }
 
         .btn-users {
-            background-color: #ffd966;
-            color: #4b3b2f;
+            background-color: #9ec1a3;
+            /* เขียวอ่อน */
+            color: #fff;
         }
 
         .btn-categories {
-            background-color: #e6b800;
+            background-color: #6c5ce7;
+            /* ม่วง */
             color: #fff;
         }
 
@@ -83,21 +86,29 @@ require_once 'auth_admin.php';
     <h2>ระบบผู้ดูแลระบบ</h2>
 
     <p class="text-center mb-4">
-        ยินดีต้อนรับ, <?= isset($_SESSION['user_name']) ? htmlspecialchars($_SESSION['user_name']) : 'ผู้ดูแลระบบ' ?>
+        ยินดีต้อนรับ, <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'ผู้ดูแลระบบ' ?>
     </p>
 
     <div class="row g-3">
         <div class="col-md-3 col-sm-6">
-            <a href="products.php" class="btn btn-custom btn-products w-100">จัดการสินค้า</a>
+            <div class="card p-3">
+                <a href="products.php" class="btn btn-custom btn-products w-100">จัดการสินค้า</a>
+            </div>
         </div>
         <div class="col-md-3 col-sm-6">
-            <a href="orders.php" class="btn btn-custom btn-orders w-100">จัดการคำสั่งซื้อ</a>
+            <div class="card p-3">
+                <a href="orders.php" class="btn btn-custom btn-orders w-100">จัดการคำสั่งซื้อ</a>
+            </div>
         </div>
         <div class="col-md-3 col-sm-6">
-            <a href="users.php" class="btn btn-custom btn-users w-100">จัดการสมาชิก</a>
+            <div class="card p-3">
+                <a href="users.php" class="btn btn-custom btn-users w-100">จัดการสมาชิก</a>
+            </div>
         </div>
         <div class="col-md-3 col-sm-6">
-            <a href="categories.php" class="btn btn-custom btn-categories w-100">จัดการหมวดหมู่</a>
+            <div class="card p-3">
+                <a href="category.php" class="btn btn-custom btn-category w-100">จัดการหมวดหมู่</a>
+            </div>
         </div>
     </div>
 
@@ -109,4 +120,5 @@ require_once 'auth_admin.php';
         © <?= date("Y") ?> ระบบผู้ดูแล
     </footer>
 </body>
+
 </html>
